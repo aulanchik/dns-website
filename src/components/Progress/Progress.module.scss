@@ -1,0 +1,48 @@
+.progress {
+    background: var(--clr-deep-pink);
+    color: var(--clr-white);
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            align-items: stretch;
+            gap: 6rem;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__video {
+        width: 100%;
+        height: 651px;
+        object-fit: cover;
+    }
+
+    &__inner {
+        margin: 0 4rem;
+    }
+
+    &__heading {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-family: var(--font-gilroy);
+        line-height: 58px;
+        max-width: 541px;
+
+    }
+
+    &__paragraph {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: var(--font-plex);
+        line-height: 30px;
+    }
+}

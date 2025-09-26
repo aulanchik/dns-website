@@ -1,9 +1,25 @@
-import React from 'react';
+import Header from '@/components/Header/Header';
+import Hero from '@/components/Hero/Hero';
+import Services from '@/components/Services/Services';
+import Partners from '@/components/Partners/Partners';
+import Progress from '@/components/Progress/Progress';
+import Slider from '@/components/Slider/Slider';
+import FAQ from '@/components/FAQ/FAQ';
+import Features from '@/components/Features/Features';
+import Contacts from '@/components/Contacts/Contacts';
 
 export default function Home() {
   return (
-    <div>
-      Lorem Ipsum
-    </div>
+    <>
+      <Header />
+      <Hero />
+      <Services />
+      <Partners />
+      <Progress />
+      <Slider />
+      <FAQ />
+      <Features />
+      <Contacts />
+    </>
   )
 }

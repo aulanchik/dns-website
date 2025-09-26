@@ -1,0 +1,97 @@
+.slider {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #fff 50%, #000 50%);
+    position: relative;
+
+    &__swiper {
+        border-radius: 10px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 89px;
+        padding-bottom: 19px;
+    }
+
+    &__slogan {
+        color: #0A151B;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: var(--font-gilroy);
+        line-height: 58px;
+    }
+
+    &__link {
+        color: #000000;
+        font-family: var(--font-plex);
+        text-decoration: underline;
+        line-height: 23px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__article {
+        position: absolute;
+        background: #00000024;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 80px 60px;
+    }
+
+    &__quote {
+        color: var(--clr-white);
+        font-weight: bold;
+        font-size: 33px;
+        line-height: 41px;
+        max-width: 70%;
+        padding-bottom: 10px;
+        font-family: var(--font-gilroy);
+    }
+
+    &__name {
+        font-size: 12px;
+        color: var(--clr-white);
+        line-height: 25px;
+        font-weight: 400;
+        font-family: var(--font-plex);
+    }
+
+    &__title {
+        font-size: 12px;
+        color: var(--clr-white);
+        line-height: 25px;
+        font-weight: 400;
+        font-family: var(--font-plex);
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        &__header {
+            padding-bottom: 20px;
+        }
+
+        &__slogan {
+            font-size: 20px;
+        }
+
+        &__article {
+            padding: 20px 20px;
+        }
+
+        &__quote {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+}
