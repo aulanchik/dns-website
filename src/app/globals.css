@@ -3,6 +3,11 @@
 @import 'tailwindcss';
 
 :root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-midnight: #31297d;
+  --clr-blurple: #48307f;
+
   --font-gilroy: 'Gilroy Bold', sans-serif;
   --font-plex: 'IBM Plex Mono', monospace;
   --swiper-pagination-bullet-width: 21px !important;
