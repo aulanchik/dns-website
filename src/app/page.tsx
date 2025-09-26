@@ -5,6 +5,7 @@ import Partners from '@/components/Partners/Partners';
 import Progress from '@/components/Progress/Progress';
 import Slider from '@/components/Slider/Slider';
 import FAQ from '@/components/FAQ/FAQ';
+import Features from '@/components/Features/Features';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Progress />
       <Slider />
       <FAQ />
+      <Features />
     </>
   )
 }
