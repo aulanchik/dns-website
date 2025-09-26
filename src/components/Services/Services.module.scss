@@ -1,0 +1,82 @@
+.services {
+    position: relative;
+    // background-color: var(--color-white);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 284px);
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+        margin-top: -80px;
+        width: 284px;
+
+        &:hover {
+            background-color: #ff2c9c;
+            color: #fff;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &__icon {
+        width: 50px;
+        margin: 1rem;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--clr-neon-pink);
+        width: 238px;
+
+        .services__card:hover & {
+            color: var(--clr-white);
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 23px;
+        font-family: var(--font-plex);
+        width: 235px;
+        margin-bottom: 1rem;
+        color: var(--clr-black);
+
+        .services__card:hover & {
+            color: var(--clr-white);
+        }
+
+    }
+
+    &__link {
+        color: var(--clr-crimson);
+        font-size: 12px;
+        font-weight: 400;
+        font-family: var(--font-plex);
+        line-height: 23px;
+        text-decoration: underline;
+
+        .services__card:hover & {
+            color: var(--clr-white);
+        }
+    }
+}
