@@ -1,0 +1,48 @@
+.hero {
+    background: var(--clr-midnight) url('/images/backgrounds/bg-geometry.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    color: var(--clr-white);
+    height: 742px;
+
+    &__pd {
+        height: 260px;
+    }
+
+    &__block {
+        display: flex;
+    }
+
+    &__text {
+        padding-left: 20px;
+        max-width: 567px;
+    }
+
+    &__title {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 1rem;
+        font-family: var(--font-gilroy);
+
+        @media (min-width: 768px) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-family: var(--font-plex);
+        line-height: 30px;
+        font-weight: 400;
+        color: car(--clr-white);
+    }
+
+    &__image {
+        position: relative;
+        width: 560px;
+        left: 100px;
+        top: -30px;
+    }
+}
