@@ -6,6 +6,7 @@ import Progress from '@/components/Progress/Progress';
 import Slider from '@/components/Slider/Slider';
 import FAQ from '@/components/FAQ/FAQ';
 import Features from '@/components/Features/Features';
+import Contacts from '@/components/Contacts/Contacts';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Slider />
       <FAQ />
       <Features />
+      <Contacts />
     </>
   )
 }
