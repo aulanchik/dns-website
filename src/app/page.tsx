@@ -4,6 +4,7 @@ import Services from '@/components/Services/Services';
 import Partners from '@/components/Partners/Partners';
 import Progress from '@/components/Progress/Progress';
 import Slider from '@/components/Slider/Slider';
+import FAQ from '@/components/FAQ/FAQ';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Partners />
       <Progress />
       <Slider />
+      <FAQ />
     </>
   )
 }
