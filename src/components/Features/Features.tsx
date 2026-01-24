@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './Features.module.scss';
 import { features } from './data';
 
@@ -11,10 +12,12 @@ const Features = () => {
                 {features.map((feature, index) => (
                     <div key={`${feature.id}-${index}`} className={styles.features__item}>
                         <div className={styles.features__iconWrapper}>
-                            <img
+                            <Image
                                 className={styles.features__icon}
                                 src={`/images/${feature.icon}`}
                                 alt={feature.label}
+                                width={50}
+                                height={50}
                             />
                         </div>
                         <h3 className={styles.features__label}>{feature.label}</h3>

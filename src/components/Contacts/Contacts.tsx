@@ -1,9 +1,23 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image'
 import styles from './Contacts.module.scss';
 import Wrapper from '@/components/Wrapper/Wrapper';
 
 function Contacts() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log('Form submitted:', data);
+        setIsSubmitted(true);
+
+        setTimeout(() => setIsSubmitted(false), 3000);
+    };
+
     return (
         <section id='contact' className={styles.hero}>
             <div className={styles.hero__bg} aria-hidden />
@@ -23,10 +37,7 @@ function Contacts() {
 
                     <form
                         className={styles.form}
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            alert('Submitted!');
-                        }}
+                        onSubmit={handleSubmit}
                     >
                         <label className={styles.form__field}>
                             <input
@@ -76,19 +87,22 @@ function Contacts() {
                         </label>
 
                         <div className={styles.form__actions}>
-                            <button className={styles.form__button} type="submit">
-                                Submit now
+                            <button className={styles.form__button} type="submit" disabled={isSubmitted}>
+                                {isSubmitted ? 'Submitted!' : 'Submit now'}
                             </button>
+                            {isSubmitted && <p className={styles.form__success}>Thank you! We will get back to you soon.</p>}
                         </div>
                     </form>
                 </div>
 
                 <footer className={styles.footer}>
                     <div className={styles.footer__col}>
-                        <img
+                        <Image
                             className={styles.footer__logo}
                             src='/images/dns-logo.png'
-                            alt='logo'
+                            alt='DNS logo'
+                            width={120}
+                            height={40}
                         />
                     </div>
 

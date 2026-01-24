@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from "./Header.module.scss";
 import { nav } from './data';
 
@@ -8,9 +9,11 @@ const Header: React.FC = () => {
             <div className={styles.wrapper}>
                 <div className={styles.header}>
                     <div className={styles.header__left}>
-                        <img
+                        <Image
                             src='/images/dns-logo.png'
-                            alt='logo'
+                            alt='DNS logo'
+                            width={120}
+                            height={40}
                         />
                     </div>
                     <div className={styles.header__center}>
