@@ -32,7 +32,7 @@ const Slider = () => {
                             <img
                                 src={pic.image}
                                 className={styles.slider__img}
-                                alt="img"
+                                alt={`Testimonial image for ${pic.name}`}
                             />
                         </SwiperSlide>
                     ))}
