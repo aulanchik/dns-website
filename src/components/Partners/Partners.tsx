@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './Partners.module.scss';
 
 const partnerLogos = [
@@ -16,9 +17,11 @@ const Partners = () => {
             <div className={styles.partners__container}>
                 {partnerLogos.map((logo, index) => (
                     <div key={index} className={styles.partners__logo}>
-                        <img
+                        <Image
                             src={`/images/partners/${logo}`}
-                            alt={`Partner ${index + 1}`}
+                            alt={`${logo.replace('logo-', '').replace('.svg', '')} logo`}
+                            width={100}
+                            height={50}
                         />
                     </div>
                 ))}
