@@ -9,6 +9,14 @@
         margin: 0 auto;
         gap: 2rem;
 
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card {
@@ -23,7 +31,17 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
         transition: all 0.3s ease;
         margin-top: -80px;
-        width: 284px;
+        width: 100%;
+        max-width: 284px;
+
+        @media (max-width: 1024px) {
+            margin-top: 0;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            padding: 1rem;
+        }
 
         &:hover {
             background-color: #ff2c9c;
@@ -45,7 +63,11 @@
         font-weight: 600;
         margin-bottom: 1rem;
         color: var(--clr-neon-pink);
-        width: 238px;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+            font-size: 1.1rem;
+        }
 
         .services__card:hover & {
             color: var(--clr-white);
