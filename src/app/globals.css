@@ -40,3 +40,17 @@
     left: 30px !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+#contact {
+  scroll-margin-top: 120px;
+}
